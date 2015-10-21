@@ -6,5 +6,7 @@
     <color name="cor_enunciado_header">#ffffffff</color>
     <color name="cor_enunciado_padrao">#ffffffff</color>
     <color name="fundo_padrao">#ff46443f</color>
-    <color name="cor_linha_tabela">#ff46443f</color>
+    <color name="fundo_selecionado">#b3903b</color>
+    <color name="fundo_header">#3c6a8f</color>
+    <color name="cor_linha_tabela">#ffffffff</color>
 </resources>

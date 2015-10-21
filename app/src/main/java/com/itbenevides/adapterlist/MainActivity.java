@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView2 txt4 = new TextView2(getApplicationContext(), false);
                 TextView2 txt5 = new TextView2(getApplicationContext(), false);
 
-                String st = "";
+                String st = "Testando";
 
                 txt1.setText(st);
                 txt2.setText(st);
@@ -66,6 +67,12 @@ public class MainActivity extends AppCompatActivity {
                 row.addView(txt4);
                 row.addView(txt5);
 
+                row.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        onClickTabela(view);
+                    }
+                });
                 rows.add(row);
             }
 
@@ -93,8 +100,50 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    
-    
+
+    public void onClickTabela(View v) {
+        TableRow tableRow;
+        TextView textview;
+        int indice = 0;
+
+
+        for (int i = 1; i < tabela.getChildCount(); i++) {
+            if (tabela.getChildAt(i) instanceof TableRow) {
+                tableRow = (TableRow) tabela.getChildAt(i);
+                if (tableRow == (TableRow) v) {
+                    indice = i - 1;
+                }
+                for (int z = 0; z < tableRow.getChildCount(); z++) {
+                    if (tableRow.getChildAt(z) instanceof TextView) {
+                        textview = (TextView) tableRow.getChildAt(z);
+
+                            textview.setBackgroundDrawable(getResources().getDrawable(R.drawable.body));
+
+                    }
+                }
+            }
+        }
+
+        try {
+
+           // pedidoselecionado = listaPedidos.get(indice);
+
+        } finally {
+
+        }
+        tableRow = (TableRow) v;
+        for (int i = 0; i < tableRow.getChildCount(); i++) {
+            if (tableRow.getChildAt(i) instanceof TextView) {
+
+                textview = (TextView) tableRow.getChildAt(i);
+
+                    textview.setBackgroundDrawable(getResources().getDrawable(R.drawable.body_select));
+
+
+            }
+        }
+
+    }
     
     
 
