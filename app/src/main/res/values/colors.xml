@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="cor_enunciado_header">#ffffffff</color>
+    <color name="cor_enunciado_padrao">#ffffffff</color>
+    <color name="fundo_padrao">#ff46443f</color>
+    <color name="cor_linha_tabela">#ff46443f</color>
+</resources>
