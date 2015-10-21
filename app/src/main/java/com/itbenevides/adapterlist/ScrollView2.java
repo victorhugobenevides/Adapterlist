@@ -359,14 +359,7 @@ public class ScrollView2 extends FrameLayout {
         return true;
     }
 
-    /**
-     * <p>Handles scrolling in response to a "home/end" shortcut press.</p>
-     *
-     * @param direction the scroll direction: {@link android.view.View#FOCUS_UP}
-     *                  to go the top of the view or
-     *                  {@link android.view.View#FOCUS_DOWN} to go the bottom
-     * @return true if the key event is consumed by this method, false otherwise
-     */
+
     public boolean fullScroll(int direction_vert, int direction_horz) {
         int scrollAmountY = 0, scrollAmountX = 0;
         //  vertical
@@ -404,7 +397,7 @@ public class ScrollView2 extends FrameLayout {
     /**
      * Smooth scroll by a Y delta
      *
-     * @param delta the number of pixels to scroll by on the Y axis
+     * @param deltaX the number of pixels to scroll by on the Y axis
      */
     private void doScroll(int deltaX, int deltaY) {
         if (deltaX != 0 || deltaY != 0) {
